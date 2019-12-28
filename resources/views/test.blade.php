@@ -54,6 +54,8 @@
             </div>
         @endif
 
+        {{ \Illuminate\Support\Facades\Session::get('type') }}
+
 
 
 

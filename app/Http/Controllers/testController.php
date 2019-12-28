@@ -36,14 +36,24 @@ class testController extends Controller
         $start = new Test();
 
         $start->id = $request->start;
+        $start->type = $request->type;
 
        if($start->save())
        {
 
            $id = $start->id;
-           Session::put('test_id', $id);
+          $type = $start->type;
 
-           return redirect('basic-test/'. random_int(1,10))->with('status', 'Test started!');
+           Session::put('test_id', $id);
+           Session::put('type',  $type);
+
+           if ($type == 1){
+               return redirect('basic-test/'. random_int(1,10))->with('status', 'Test 1 started!');
+           }else
+               return redirect('basic-test/'. random_int(11,20))->with('status', 'Test 2 started!');
+
+
+
        }
 
 
@@ -53,9 +63,7 @@ class testController extends Controller
 
     public function getQuestion(Request$request, $id)
     {
-
         $question = Question::findOrFail($id);
-        //$answer = $question->question()->where('question_id', '=', $question->id)->get();;
 
         Session::put('qid', $id);
 
@@ -63,16 +71,14 @@ class testController extends Controller
         session() ->get('question');
 
         $question_session = session('question');
-        $question_check = Question::whereNotIn('id',$question_session )->inRandomOrder()->get();; //checks if question with this id exists on the stack
-
+        $type = Session::get('type');
+        $question_check = Question::whereNotIn('id',$question_session )->where('type', '=', $type)->inRandomOrder()->get();; //checks if question with this id exists on the stack
         $answer = Answer::findOrFail($id)->question()->where('question_id', '=', $question->id)->get();
-
-
         $testid = Session::get('test_id');
+
         $result = Result::where('test_id', '=', $testid)->sum('selected_answer');
 
         Session::put('result', $result);
-
         return view('test') ->with(compact( 'question_check', 'question', 'question_session', 'answer', 'result', 'answer_id'));
 
 
