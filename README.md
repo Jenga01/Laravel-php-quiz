@@ -5,7 +5,8 @@ Simple PHP quiz built on Laravel framework. Questions where taken from: https://
 * Questions come at random order, but do not repeat
 * Each question(answer) has some amount of points
 * points are sumed up
-* refreshing page remembers last question and points
-* save result on finish/check correct/incorrect answers
+* Page refresh saves last question and points
+* save result 
+* check correct/incorrect answers
 
 * Database(tables) with filled Questions/Answers: https://we.tl/t-GtIdFSemMW
