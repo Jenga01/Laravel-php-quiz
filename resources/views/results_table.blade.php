@@ -7,13 +7,17 @@
 @foreach($answers as $a)
 
 
-
     {{$a->question}} <br>
 
     @if ($a->selected_answer == 1)
-        Answer was Correct <br>
+        <div class="correct" style="background: #58FF33">
+            Correct
+        </div>
+
     @else
-     Answer was Incorrect <br>
+        <div class="incorrect" style="background: red">
+           Incorrect
+        </div>
     @endif
 
     @endforeach

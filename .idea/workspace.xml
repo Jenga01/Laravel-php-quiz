@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83bfda5d-30bd-4365-8fd3-fa581a940c96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/testController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/testController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_23_175254_create_questions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_23_175254_create_questions__table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_24_154952_create_answers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_28_132445_create_answers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_26_191141_create_tests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_26_191141_create_tests__table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_27_141328_create_final_results_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_27_141328_create_final_results__table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_27_192534_create_results_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_27_192534_create_results__table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/start.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/start.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/results_table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/results_table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +183,9 @@
       <workItem from="1577372050584" duration="16918000" />
       <workItem from="1577446353181" duration="29697000" />
       <workItem from="1577479727886" duration="4782000" />
-      <workItem from="1577525739324" duration="9475000" />
+      <workItem from="1577525739324" duration="11014000" />
+      <workItem from="1577557958216" duration="780000" />
+      <workItem from="1577978426687" duration="3614000" />
     </task>
     <servers />
   </component>
@@ -206,9 +201,9 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1554" y="624" key="NewPhpFileDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1577462062359" />
-    <state x="1416" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1577525744653">
+    <state x="1416" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1577978478316">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="1416" y="525" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1577525744653" />
+    <state x="1416" y="525" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1577978478316" />
   </component>
 </project>

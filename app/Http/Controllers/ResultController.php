@@ -16,12 +16,18 @@ class ResultController extends Controller
     public function saveAnswer(Request $request)
 
     {
+
+        $request->validate([
+            'selected_answer' => 'required'
+        ]);
+
         $id = $request->input('id');
         $result = new Result();
         $result->selected_answer = $request->selected_answer;
         $result->test_id =  Session::get('test_id');
         $result->question_id = Session::get('qid');
         $result->save();
+
 
 
         return redirect('basic-test/' . $id)->with('status', 'Answer saved!');
