@@ -9,4 +9,4 @@ Simple PHP quiz built on Laravel framework. Questions where taken from: https://
 * save result 
 * check correct/incorrect answers
 
-* Database(tables) with filled Questions/Answers: https://we.tl/t-GtIdFSemMW
+* Database(tables) with filled Questions/Answers: https://drive.google.com/open?id=1Dp_raS0lqb8azye47ivPLKUy96sA5m3g
