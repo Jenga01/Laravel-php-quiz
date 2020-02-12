@@ -9,4 +9,4 @@ PHP quiz built on Laravel framework. Questions were taken from: https://www.w3sc
 * save result 
 * check correct/incorrect answers
 
-* Database(tables) with filled Questions/Answers: https://drive.google.com/open?id=1Dp_raS0lqb8azye47ivPLKUy96sA5m3g
+* Database(tables) with pre-filled Questions/Answers: https://drive.google.com/open?id=1Dp_raS0lqb8azye47ivPLKUy96sA5m3g
