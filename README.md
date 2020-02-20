@@ -1,6 +1,5 @@
 # Laravel-php-quiz
-PHP quiz built with Laravel framework. Questions were taken from: https://www.w3schools.com/php/php_quiz.asp
-
+PHP quiz built with Laravel framework.
 * Select between Test 1 and Test 2
 * Questions come at random order, but do not repeat
 * Each question(answer) has some amount of points
