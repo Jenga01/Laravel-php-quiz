@@ -9,5 +9,5 @@ PHP quiz built with Laravel framework.
 * check correct/incorrect answers
 
 * Database(tables) with pre-filled Questions/Answers: https://drive.google.com/open?id=1Dp_raS0lqb8azye47ivPLKUy96sA5m3g
-# DEMO here:
+# live DEMO here:
 https://php-quiz-269513.appspot.com/start
