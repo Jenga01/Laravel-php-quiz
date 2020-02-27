@@ -47,6 +47,10 @@ class ResultController extends Controller
     public function saveResult(Request $request)
     {
 
+        $request->validate([
+            'name' => 'required'
+        ]);
+
 
         $saveResult = new FinalResults();
 

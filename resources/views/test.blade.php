@@ -21,6 +21,7 @@
            <b><label class="control-label col-sm-2" for="pwd">Answer:</label></b>
             <div class="col-sm-10">
                <input type="radio" class="form-control" name="selected_answer" value="{{$a->is_correct}}">{{$a->answer}}
+
             </div>
         </div>
         @endforeach
@@ -55,8 +56,23 @@
             </div>
         @endif
 
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script>
 
+            jQuery(document).ready(function($) {
 
+                if (window.history && window.history.pushState) {
+
+                    window.history.pushState('forward', null, '');
+
+                    $(window).on('popstate', function() {
+                        $(location).attr('href', 'http://localhost/start')
+                        alert('Test has been cancelled');
+                    });
+
+                }
+            });
+            </script>
 
 
 

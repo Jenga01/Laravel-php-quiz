@@ -31,6 +31,8 @@ Route::get('/basic-test/{id}', 'testController@getQuestion')->name('question');
 
 
 
+
+
 Route::post('/basic-test', 'ResultController@saveAnswer')->name('save.answer');
 Route::get('/basic-test', 'ResultController@getResult');
 Route::post('/basic-test/result', 'ResultController@saveResult')->name('save.result');

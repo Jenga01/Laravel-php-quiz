@@ -47,7 +47,9 @@ class testController extends Controller
            Session::put('test_id', $id);
            Session::put('type',  $type);
 
+
            if ($type == 1){
+
                return redirect('basic-test/'. random_int(1,10))->with('status', 'Test 1 started!');
            }else
                return redirect('basic-test/'. random_int(11,20))->with('status', 'Test 2 started!');
@@ -61,14 +63,14 @@ class testController extends Controller
 
 
 
-    public function getQuestion(Request$request, $id)
+    public function getQuestion(Request $request, $id)
     {
         $question = Question::findOrFail($id);
 
         Session::put('qid', $id);
 
         $request->session()->push('question', $id);
-        session() ->get('question');
+        session()->get('question');
 
         $question_session = session('question');
         $type = Session::get('type');
@@ -79,7 +81,10 @@ class testController extends Controller
         $result = Result::where('test_id', '=', $testid)->sum('selected_answer');
 
         Session::put('result', $result);
+
         return view('test') ->with(compact( 'question_check', 'question', 'question_session', 'answer', 'result', 'answer_id'));
+
+
 
 
     }

@@ -11,12 +11,12 @@
 
     @if ($a->selected_answer == 1)
         <div class="correct" style="background: #58FF33">
-            Correct
-        </div>
+           Answered correctly
 
+        </div>
     @else
         <div class="incorrect" style="background: red">
-           Incorrect
+           Answered incorrectly
         </div>
     @endif
 
