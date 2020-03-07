@@ -75,7 +75,7 @@ class testController extends Controller
         $question_session = session('question');
         $type = Session::get('type');
         $question_check = Question::whereNotIn('id',$question_session )->where('type', '=', $type)->inRandomOrder()->get();; //checks if question with this id exists on the stack
-        $answer = Answer::findOrFail($id)->question()->where('question_id', '=', $question->id)->get();
+        $answer = Answer::findOrFail($id)->question()->get();
         $testid = Session::get('test_id');
 
         $result = Result::where('test_id', '=', $testid)->sum('selected_answer');

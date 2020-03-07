@@ -26,6 +26,8 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+
+
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     App\Http\Kernel::class
@@ -41,6 +43,21 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+
+# [START] Add the following block to `bootstrap/app.php`
+/*
+|--------------------------------------------------------------------------
+| Set Storage Path
+|--------------------------------------------------------------------------
+|
+| This script allows you to override the default storage location used by
+| the  application.  You may set the APP_STORAGE environment variable
+| in your .env file,  if not set the default location will be used
+|
+*/
+$app->useStoragePath(env('APP_STORAGE', base_path() . '/storage'));
+# [END]
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
@@ -51,5 +68,8 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
+
+
+
 
 return $app;

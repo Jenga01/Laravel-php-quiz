@@ -66,7 +66,7 @@
                     window.history.pushState('forward', null, '');
 
                     $(window).on('popstate', function() {
-                        $(location).attr('href', 'http://localhost/start')
+                        $(location).attr('href', 'https://php-quiz-269513.appspot.com/start')
                         alert('Test has been cancelled');
                     });
 

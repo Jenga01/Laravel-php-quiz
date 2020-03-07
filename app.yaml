@@ -1,8 +1,12 @@
 runtime: php72
 
 env_variables:
-  ## Put production environment variables here.
   APP_KEY: base64:7utOCXZxdhcin5tUKJUachQZ7ddP9ZWha5KB/hHRXw4=
   APP_STORAGE: /tmp
   VIEW_COMPILED_PATH: /tmp
-  SESSION_DRIVER: cookie
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  DB_DATABASE: questionaire
+  DB_USERNAME: root
+  DB_PASSWORD: 4niFCBurN4gk8b98
+  DB_SOCKET: "/cloudsql/php-quiz-269513:us-central1:questionaire"

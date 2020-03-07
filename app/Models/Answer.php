@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use App\Models\Question;
 
 class Answer extends Model
 {
@@ -15,7 +16,7 @@ class Answer extends Model
 
 
     public function question() {
-        return $this->hasMany('App\Models\Answer', 'question_id');
+        return $this->hasMany(Answer::class, 'question_id');
     }
 
 
