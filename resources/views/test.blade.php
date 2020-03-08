@@ -2,10 +2,7 @@
 
 @section('content')
 
-        @foreach($question_check as $q)
 
-
-            @endforeach
 
         <form method="post" action="{{ action('ResultController@saveAnswer') }}" accept-charset="UTF-8">
             @csrf
@@ -32,7 +29,7 @@
             </div>
         </div>
             <div class="form-group">
-                <input type="hidden" value="{{optional($q)->id}}" name="id">
+                <input type="hidden" value="{{optional($question_check)->id}}" name="id">
                 <button class="btn btn-primary">Submit</button>
 
             </div>
@@ -59,19 +56,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script>
 
-            jQuery(document).ready(function($) {
 
-                if (window.history && window.history.pushState) {
-
-                    window.history.pushState('forward', null, '');
-
-                    $(window).on('popstate', function() {
-                        $(location).attr('href', 'https://php-quiz-269513.appspot.com/start')
-                        alert('Test has been cancelled');
-                    });
-
-                }
-            });
             </script>
 
 

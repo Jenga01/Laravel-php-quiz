@@ -11,9 +11,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 
-if(version_compare(PHP_VERSION, '7.2.0', '>=')) {
-    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
-}
 
 
 class testController extends Controller
@@ -62,11 +59,9 @@ class testController extends Controller
     }
 
 
-
     public function getQuestion(Request $request, $id)
     {
         $question = Question::findOrFail($id);
-
         Session::put('qid', $id);
 
         $request->session()->push('question', $id);
@@ -74,7 +69,7 @@ class testController extends Controller
 
         $question_session = session('question');
         $type = Session::get('type');
-        $question_check = Question::whereNotIn('id',$question_session )->where('type', '=', $type)->inRandomOrder()->get();; //checks if question with this id exists on the stack
+        $question_check = Question::whereNotIn('id',$question_session )->where('type', '=', $type)->inRandomOrder()->first();; //checks if question with this id exists on the stack
         $answer = Answer::findOrFail($id)->question()->get();
         $testid = Session::get('test_id');
 
@@ -82,7 +77,7 @@ class testController extends Controller
 
         Session::put('result', $result);
 
-        return view('test') ->with(compact( 'question_check', 'question', 'question_session', 'answer', 'result', 'answer_id'));
+        return view('test') ->with(compact( 'question_check', 'question', 'question_session', 'answer', 'result'));
 
 
 
