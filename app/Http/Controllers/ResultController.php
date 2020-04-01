@@ -14,24 +14,22 @@ class ResultController extends Controller
 
 
     public function saveAnswer(Request $request)
-
     {
-
-        $request->validate([
-            'selected_answer' => 'required'
-        ]);
+        $request->validate(
+            [
+                'selected_answer' => 'required'
+            ]
+        );
 
         $id = $request->input('id');
         $result = new Result();
         $result->selected_answer = $request->selected_answer;
-        $result->test_id =  Session::get('test_id');
+        $result->test_id = Session::get('test_id');
         $result->question_id = Session::get('qid');
         $result->save();
 
 
-
         return redirect('basic-test/' . $id)->with('status', 'Answer saved!');
-
     }
 
     public function getResult()
@@ -40,16 +38,16 @@ class ResultController extends Controller
         $final = Result::where('test_id', '=', $testid)->sum('selected_answer');
 
         return view('result')->with(compact('final'));
-
     }
 
 
     public function saveResult(Request $request)
     {
-
-        $request->validate([
-            'name' => 'required'
-        ]);
+        $request->validate(
+            [
+                'name' => 'required'
+            ]
+        );
 
 
         $saveResult = new FinalResults();
@@ -58,15 +56,12 @@ class ResultController extends Controller
         $saveResult->result = $request->result;
         $saveResult->test_id = Session::get('test_id');
 
-       if ($saveResult->save())
-       {
-
-           return redirect('basic-test/')->with('status-final', 'Your name and result has been saved!');
-       }
-
+        if ($saveResult->save()) {
+            return redirect('basic-test/')->with('status-final', 'Your name and result has been saved!');
+        }
     }
 
-    public function  showAnswers($id)
+    public function showAnswers($id)
     {
         $testid = Session::get('test_id');
 
@@ -74,18 +69,13 @@ class ResultController extends Controller
         $answers = Test::findOrFail($id)
             ->join('results', 'results.test_id', '=', 'tests.id')
             ->join('questions', 'questions.id', '=', 'results.question_id')
-            ->select('questions.question','results.selected_answer')
+            ->select('questions.question', 'results.selected_answer')
             ->where('results.test_id', '=', $testid)
             ->get();
 
 
-
         return view('results_table')->with(compact('answers'));
-
-
-
     }
-
 
 
 }

@@ -8,9 +8,10 @@ class Result extends Model
 
 {
 
-    public function results(){
+    public function results()
+    {
         return $this->hasMany('tests');
-// You are missing the return above.
+
     }
 
     protected $table = 'results';

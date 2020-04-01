@@ -15,11 +15,10 @@ class Answer extends Model
     const CREATED_AT = null;
 
 
-    public function question() {
+    public function question()
+    {
         return $this->hasMany(Answer::class, 'question_id');
     }
-
-
 
 
 }

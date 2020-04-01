@@ -14,13 +14,16 @@ class CreateAnswersTable extends Migration
     public function up()
     {
         Schema::enableForeignKeyConstraints();
-        Schema::create('answers', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('answer');
-            $table->boolean('is_correct');
-            $table->bigInteger('question_id')->unsigned();
-            $table->foreign('question_id')->references('id')->on('questions');
-        });
+        Schema::create(
+            'answers',
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('answer');
+                $table->boolean('is_correct');
+                $table->bigInteger('question_id')->unsigned();
+                $table->foreign('question_id')->references('id')->on('questions');
+            }
+        );
     }
 
     /**

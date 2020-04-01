@@ -13,15 +13,17 @@ class CreateFinalResultsTable extends Migration
      */
     public function up()
     {
-        Schema::create('final_results', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-            $table->string('name');
-            $table->bigInteger('result');
-            $table->bigInteger('test_id')->unsigned();
-            $table->foreign('test_id')->references('id')->on('tests');
-
-        });
+        Schema::create(
+            'final_results',
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->timestamps();
+                $table->string('name');
+                $table->bigInteger('result');
+                $table->bigInteger('test_id')->unsigned();
+                $table->foreign('test_id')->references('id')->on('tests');
+            }
+        );
     }
 
     /**

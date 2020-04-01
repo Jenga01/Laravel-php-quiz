@@ -16,7 +16,7 @@
             <input type="text" class="form-control" name="name">
         </div>
 
-            <button class="btn btn-primary">Save result</button>
+        <button class="btn btn-primary">Save result</button>
 
     </form>
 

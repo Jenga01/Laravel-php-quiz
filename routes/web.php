@@ -13,11 +13,12 @@
 */
 
 
-
-Route::get('/basic-test', function () {
-    return view('result');
-});
-
+Route::get(
+    '/basic-test',
+    function () {
+        return view('result');
+    }
+);
 
 
 Route::get('tests', 'usersController@index');
@@ -28,9 +29,6 @@ Route::post('/start', 'testController@start')->name('create.test');
 
 Route::get('/start', 'testController@index')->name('test');
 Route::get('/basic-test/{id}', 'testController@getQuestion')->name('question');
-
-
-
 
 
 Route::post('/basic-test', 'ResultController@saveAnswer')->name('save.answer');
