@@ -8,5 +8,3 @@ PHP quiz built with Laravel framework.
 * save result 
 * check correct/incorrect answers
 
-# DEMO here:
-https://php-quiz-269513.appspot.com/start
